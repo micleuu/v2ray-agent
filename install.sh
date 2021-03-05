@@ -636,20 +636,20 @@ randomPathFunction() {
 
 	if [[ -n "${currentPath}" ]]; then
 		echo
-		read -r -p "读取到上次安装记录，是否使用上次安装时的path路径 ？[y/n]:" historyPathStatus
+		read -r -p "读取到上次安装记录，是否使用上次安装时的path路径 ？[y/n]:" 'micleuu'
 		echo
 	fi
 
 	if [[ "${historyPathStatus}" == "y" ]]; then
-		customPath="micleuu"
+		customPath='micleuu'
 		echoContent green " ---> 使用成功\n"
 	else
 		echoContent yellow "请输入自定义路径[例: alone]，不需要斜杠，[回车]随机路径"
 		read -r -p '路径:' customPath
 
 		if [[ -z "${customPath}" ]]; then
-			customPath=$(head -n 50 /dev/urandom | sed 's/[^a-z]//g' | strings -n 4 | tr 'A-Z' 'a-z' | head -1)
-			currentPath=${customPath:0:4}
+			customPath='micleuu'
+			currentPath='micleuu'
 		fi
 	fi
 	echoContent yellow "path：${customPath}"
