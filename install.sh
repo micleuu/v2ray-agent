@@ -93,7 +93,7 @@ initVar() {
 	v2rayCoreVersion=
 
 	# 随机路径
-	customPath="micleuu"
+	customPath=micleuu
 
 	# centos version
 	centosVersion=
@@ -641,7 +641,7 @@ randomPathFunction() {
 	fi
 
 	if [[ "${historyPathStatus}" == "y" ]]; then
-		customPath='micleuu'
+		customPath="micleuu"
 		echoContent green " ---> 使用成功\n"
 	else
 		echoContent yellow "请输入自定义路径[例: alone]，不需要斜杠，[回车]随机路径"
