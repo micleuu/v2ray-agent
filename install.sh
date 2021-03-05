@@ -93,13 +93,13 @@ initVar() {
 	v2rayCoreVersion=
 
 	# 随机路径
-	customPath=
+	customPath="micleuu"
 
 	# centos version
 	centosVersion=
 
 	# UUID
-	currentUUID=
+	currentUUID="eaa750db-b2d8-4052-814b-96ab56d43359"
 
 	# pingIPv6 pingIPv4
 	# pingIPv4=
@@ -641,7 +641,7 @@ randomPathFunction() {
 	fi
 
 	if [[ "${historyPathStatus}" == "y" ]]; then
-		customPath=${currentPath}
+		customPath="micleuu"
 		echoContent green " ---> 使用成功\n"
 	else
 		echoContent yellow "请输入自定义路径[例: alone]，不需要斜杠，[回车]随机路径"
@@ -1643,14 +1643,14 @@ initXrayConfig() {
 		if [[ "${historyUUIDStatus}" == "y" ]]; then
 			uuid=${currentUUID}
 		else
-			uuid=$(/etc/v2ray-agent/xray/xray uuid)
+			uuid="eaa750db-b2d8-4052-814b-96ab56d43359"
 		fi
 	else
-		uuid=$(/etc/v2ray-agent/xray/xray uuid)
+		uuid="eaa750db-b2d8-4052-814b-96ab56d43359"
 	fi
 	if [[ -z "${uuid}" ]]; then
 		echoContent red "\n ---> uuid读取错误，重新生成"
-		uuid=$(/etc/v2ray-agent/xray/xray uuid)
+		uuid="eaa750db-b2d8-4052-814b-96ab56d43359"
 	fi
 
 	echoContent green "\n ---> 使用成功"
@@ -1761,7 +1761,7 @@ EOF
     "clients": [
       {
         "id": "${uuid}",
-        "email": "${domain}_vless_ws"
+        "email": "${domain}_VLESS_WS"
       }
     ],
     "decryption": "none"
@@ -1796,7 +1796,7 @@ EOF
       {
         "id": "${uuid}",
         "alterId": 1,
-        "email": "${domain}_vmess_tcp"
+        "email": "${domain}_VMess_TCP"
       }
     ]
   },
@@ -1837,7 +1837,7 @@ EOF
         "id": "${uuid}",
         "alterId": 1,
         "add": "${add}",
-        "email": "${domain}_vmess_ws"
+        "email": "${domain}_VMess_WS"
       }
     ]
   },
