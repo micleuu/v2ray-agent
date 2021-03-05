@@ -93,7 +93,7 @@ initVar() {
 	v2rayCoreVersion=
 
 	# 随机路径
-	customPath=micleuu
+	customPath=skkwb
 
 	# centos version
 	centosVersion=
@@ -636,20 +636,20 @@ randomPathFunction() {
 
 	if [[ -n "${currentPath}" ]]; then
 		echo
-		read -r -p "读取到上次安装记录，是否使用上次安装时的path路径 ？[y/n]:" 'micleuu'
+		read -r -p "读取到上次安装记录，是否使用上次安装时的path路径 ？[y/n]:" 'skkwb'
 		echo
 	fi
 
 	if [[ "${historyPathStatus}" == "y" ]]; then
-		customPath="micleuu"
+		customPath="skkwb"
 		echoContent green " ---> 使用成功\n"
 	else
 		echoContent yellow "请输入自定义路径[例: alone]，不需要斜杠，[回车]随机路径"
 		read -r -p '路径:' customPath
 
 		if [[ -z "${customPath}" ]]; then
-			customPath='micleuu'
-			currentPath='micleuu'
+			customPath='skkwb'
+			currentPath='skkwb'
 		fi
 	fi
 	echoContent yellow "path：${customPath}"
